@@ -1,17 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <header class="header">
+    <h1>그린석재</h1>
+    <nav class="menu">
+      <ul>
+        <li>그린석재</li>
+      </ul>
+    </nav>
+  </header>
+  <router-view />
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script lang="ts">
+import { Options, Vue } from "vue-class-component";
+import HelloWorld from "./components/HelloWorld.vue";
 
-export default {
-  name: 'App',
+@Options({
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+  },
+})
+export default class App extends Vue {}
 </script>
 
 <style>
@@ -21,6 +29,28 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+.header {
+  width: 100%;
+  height: 70px;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  display: flex;
+}
+.header h1 {
+  align-items: center;
+  align-self: center;
+  color: white;
+  width: 200px;
+}
+.menu ul {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  list-style: none;
 }
 </style>
