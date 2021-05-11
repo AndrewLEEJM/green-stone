@@ -1,6 +1,18 @@
 <template>
   <div>
-    <div class="mainContainer"></div>
+    <div class="mainContainer">
+      <splide :options="options">
+        <splide-slide>
+          <img src="@/assets/images/factory.jpg" />
+        </splide-slide>
+        <splide-slide>
+          <img src="@/assets/images/factory.jpg" />
+        </splide-slide>
+        <splide-slide>
+          <img src="@/assets/images/factory.jpg" />
+        </splide-slide>
+      </splide>
+    </div>
     <div class="businessSection">
       <h2 align="center">B U S I N E S S</h2>
       <ul>
@@ -22,9 +34,23 @@
 </template>
 
 <script lang="ts">
-import { Vue } from "vue-class-component";
+import { Options, Vue } from 'vue-class-component';
+import Splide from '@splidejs/vue-splide/src/js/components/Splide.vue';
+import SplideSlide from '@splidejs/vue-splide/src/js/components/SplideSlide.vue';
+import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 
-export default class Home extends Vue {}
+@Options({
+  components: {
+    Splide,
+    SplideSlide,
+  },
+})
+export default class Home extends Vue {
+  private options = {
+    perPage: 1,
+    height: 500,
+  }
+}
 </script>
 
 <style>
@@ -38,13 +64,12 @@ body {
   width: 100%;
   height: 500px;
   background-color: antiquewhite;
-  background-image: url('../../assets/images/factory.jpg');
 }
 .businessSection {
   width: 100%;
   height: 400px;
   background-color: rgb(218, 157, 78);
-  background-image: url('../../assets/images/stone.jpg');
+  background-image: url("../../assets/images/stone.jpg");
 }
 .businessSection h2 {
   margin: 0;
@@ -62,8 +87,8 @@ body {
   height: 290px;
   align-items: center;
 }
-.businessSection ul li{
-  color: rgb(240, 240, 240);;
+.businessSection ul li {
+  color: rgb(240, 240, 240);
 }
 .businessSection ul li:hover {
   color: rgb(151, 35, 35);

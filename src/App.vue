@@ -1,18 +1,20 @@
 <template>
-  <header class="header">
-    <h1>그린석재</h1>
-    <nav class="menu">
-      <ul>
-        <li>그린석재</li>
-      </ul>
-    </nav>
-  </header>
-  <router-view />
+  <div>
+    <header class="header">
+      <h1>그린석재</h1>
+      <nav class="menu">
+        <ul>
+          <li>그린석재</li>
+        </ul>
+      </nav>
+    </header>
+    <router-view />
+  </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
-import HelloWorld from "./components/HelloWorld.vue";
+import { Options, Vue } from 'vue-class-component';
+import HelloWorld from './components/HelloWorld.vue';
 
 @Options({
   components: {
@@ -38,6 +40,7 @@ export default class App extends Vue {}
   background-color: rgba(0, 0, 0, 0.7);
   position: fixed;
   display: flex;
+  z-index: 10;
 }
 .header h1 {
   align-items: center;
