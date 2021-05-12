@@ -3,13 +3,13 @@
     <div class="mainContainer">
       <splide :options="options">
         <splide-slide>
-          <img src="@/assets/images/factory.jpg" />
+          <img src="@/assets/images/factory1.jpg" />
         </splide-slide>
         <splide-slide>
-          <img src="@/assets/images/factory.jpg" />
+          <img src="@/assets/images/factory2.jpg" />
         </splide-slide>
         <splide-slide>
-          <img src="@/assets/images/factory.jpg" />
+          <img src="@/assets/images/factory3.jpg" />
         </splide-slide>
       </splide>
     </div>
@@ -47,8 +47,15 @@ import '@splidejs/splide/dist/css/themes/splide-default.min.css';
 })
 export default class Home extends Vue {
   private options = {
+    type: 'loop',
     perPage: 1,
-    height: 500,
+    height: '37%',
+    width: '93%',
+    margin: 'auto',
+    arrows: false,
+    autoplay: true,
+    interval: 3000,
+    speed: 1300,
   }
 }
 </script>
@@ -56,27 +63,37 @@ export default class Home extends Vue {
 <style>
 html {
   margin: 0;
+  background-color: rgb(243, 243, 242);
 }
 body {
   margin: 0;
 }
-.mainContainer {
+.mainContainer{
+  background: linear-gradient( to bottom, #0a5d48 50%, rgb(243, 243, 242) 10% );
+}
+.mainContainer img{
   width: 100%;
-  height: 500px;
-  background-color: antiquewhite;
+}
+.splide{
+  margin: 0 auto;
+}
+.splide__track{
+  border-radius: 15px;
+  border: 5px solid rgb(243, 243, 242);
+  box-shadow: 5px 5px 15px;
 }
 .businessSection {
   width: 100%;
   height: 400px;
-  background-color: rgb(218, 157, 78);
-  background-image: url("../../assets/images/stone.jpg");
+  /* background-color: rgb(218, 157, 78); */
+  /* background-image: url("../../assets/images/stone.jpg"); */
 }
 .businessSection h2 {
   margin: 0;
   margin-left: 35px;
   font-size: 1.875rem;
   padding-top: 70px;
-  color: rgb(240, 240, 240);
+  color: rgb(71, 56, 56);
 }
 .businessSection ul {
   list-style: none;
@@ -88,7 +105,7 @@ body {
   align-items: center;
 }
 .businessSection ul li {
-  color: rgb(240, 240, 240);
+  color: rgb(71, 56, 56);
 }
 .businessSection ul li:hover {
   color: rgb(151, 35, 35);
