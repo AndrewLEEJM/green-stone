@@ -1,5 +1,7 @@
 <template>
   <div>
+    <div class="product_banner">
+    </div>
     <div class="product_container" v-for="(product, idx) in products" :key="idx">
       <div class="product_img">
         <img :src="require(`@/assets/images/products/${product.img}`)" alt="">
@@ -25,37 +27,5 @@ export default class Product extends Vue {
 </script>
 
 <style>
-.product_container{
-  display: flex;
-  margin: 80px auto;
-  width: 80%;
-  justify-content: space-evenly;
-  padding: 10px;
-}
-.product_info{
-  text-align: left;
-  width: 50%;
-}
-.product_img{
-  width: fit-content;
-  box-shadow: 5px 5px 15px;
-}
-.product_img img{
-  height: 100%;
-}
-@media screen and (max-width: 800px) {
-  .product_container{
-  display: block;
-}
-.product_info{
-  text-align: center;
-  margin: 0 auto;
-  width: 90%;
-}
-.product_img{
-  width: fit-content;
-  margin: 0 auto;
-  box-shadow: 5px 5px 15px;
-}
-}
+
 </style>

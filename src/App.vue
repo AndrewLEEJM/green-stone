@@ -5,10 +5,16 @@
       <nav class="menu">
         <ul>
           <li><a href="#">회사소개</a></li>
-          <li><a href="#" @click.prevent="$router.push('/product')">제품안내</a></li>
+          <li>
+            <a href="#" @click.prevent="$router.push('/product')">제품안내</a>
+          </li>
+          <li><a href="#">납품사례</a></li>
           <li><a href="#">견적문의</a></li>
         </ul>
       </nav>
+      <div class="mobile_btn">
+        <img src="@/assets/images/hamburger.png" alt="" />
+      </div>
     </header>
     <router-view />
     <footer class="footer">
@@ -50,12 +56,10 @@ export default class App extends Vue {}
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
 }
 .header {
   width: 100%;
-  height: 100px;
+  height: 90px;
   top: 0;
   left: 0;
   background-color: #202020b0;
@@ -64,23 +68,31 @@ export default class App extends Vue {}
   z-index: 10;
 }
 .header h1 {
-  align-items: center;
-  align-self: center;
   color: rgb(243, 243, 242);
   cursor: pointer;
   margin-left: 10%;
 }
+.menu{
+  width: 60%;
+}
 .menu ul {
   color: rgb(243, 243, 242);
   display: flex;
-  justify-content: center;
   align-items: center;
   height: 100%;
+  width: 100%;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: 50px;
+  justify-content: space-around;
+}
+.menu ul li:hover {
+  filter: brightness(0.4);
 }
 .menu ul li {
-  margin-left: 50px;
-  margin-right: 50px;
+  font-size: 17px;
+  font-weight: 600;
 }
 .footer {
   height: 200px;
@@ -91,7 +103,6 @@ export default class App extends Vue {}
 }
 .footer_info {
   width: 500px;
-  text-align: left;
 }
 .footer_logo {
   width: 300px;
@@ -107,6 +118,27 @@ a {
   text-decoration: none;
   color: rgb(243, 243, 242);
 }
+.product_banner {
+  width: 100%;
+  height: 420px;
+  background-image: url("~@/assets/images/product_banner.jpg");
+  background-size: auto;
+}
+.mobile_btn {
+  width: 25px;
+  height: 25px;
+  align-self: center;
+  float: right;
+  margin-right: 10%;
+  display: none;
+  cursor: pointer;
+}
+.mobile_btn:hover {
+  filter: brightness(0.4);
+}
+.mobile_btn img {
+  width: 100%;
+}
 @media screen and (max-width: 800px) {
   .menu {
     display: none;
@@ -116,6 +148,19 @@ a {
   }
   .footer_info {
     width: 100%;
+  }
+  .product_banner {
+    background-position-x: center;
+  }
+  .header {
+    height: 70px;
+    justify-content: space-between;
+  }
+  .header h1 {
+    font-size: 25px;
+  }
+  .mobile_btn {
+    display: block;
   }
 }
 </style>
