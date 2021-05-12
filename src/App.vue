@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="header">
-      <h1>그린석재</h1>
+      <h1 @click="router.push('/')">그린석재</h1>
       <nav class="menu">
         <ul>
           <li><a href="#">회사소개</a></li>
