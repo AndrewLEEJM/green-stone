@@ -1,11 +1,11 @@
 <template>
   <div>
     <header class="header">
-      <h1 @click="router.push('/')">그린석재</h1>
+      <h1 @click="$router.push('/')">그린석재</h1>
       <nav class="menu">
         <ul>
           <li><a href="#">회사소개</a></li>
-          <li><a href="#">제품안내</a></li>
+          <li><a href="#" @click.prevent="$router.push('/product')">제품안내</a></li>
           <li><a href="#">견적문의</a></li>
         </ul>
       </nav>
@@ -67,7 +67,8 @@ export default class App extends Vue {}
   align-items: center;
   align-self: center;
   color: rgb(243, 243, 242);
-  width: 15rem;
+  cursor: pointer;
+  margin-left: 10%;
 }
 .menu ul {
   color: rgb(243, 243, 242);

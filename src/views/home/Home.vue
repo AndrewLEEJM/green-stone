@@ -20,9 +20,9 @@
           <i class="far fa-building fa-5x"></i>
           <p>회사소개</p>
         </li>
-        <li>
+        <li @click="$router.push('/product')">
           <i class="fas fa-cubes fa-5x"></i>
-          <p>제품소개</p>
+          <p>제품안내</p>
         </li>
         <li>
           <i class="fas fa-file-invoice-dollar fa-5x"></i>
