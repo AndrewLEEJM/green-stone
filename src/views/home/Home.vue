@@ -90,7 +90,6 @@ body {
 }
 .businessSection h2 {
   margin: 0;
-  margin-left: 35px;
   font-size: 1.875rem;
   padding-top: 70px;
   color: rgb(71, 56, 56);
@@ -103,6 +102,7 @@ body {
   margin: 0 auto;
   height: 290px;
   align-items: center;
+  padding: 0;
 }
 .businessSection ul li {
   color: rgb(71, 56, 56);
