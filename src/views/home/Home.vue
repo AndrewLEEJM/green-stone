@@ -158,6 +158,7 @@ body {
   .other_intro {
     margin: 0 auto;
     float: none;
+    width: 100%;
   }
   .product_intro {
     margin-bottom: 4px;
