@@ -58,8 +58,8 @@ export default class App extends Vue {}
   height: 100px;
   top: 0;
   left: 0;
-  background-color: #0a5d48;
-  /* position: fixed; */
+  background-color: #202020b0;
+  position: absolute;
   display: flex;
   z-index: 10;
 }
@@ -85,7 +85,7 @@ export default class App extends Vue {}
 .footer {
   height: 200px;
   display: flex;
-  background-color: #0a5d48;
+  background-color: #252525;
   color: rgb(243, 243, 242);
   justify-content: space-around;
 }

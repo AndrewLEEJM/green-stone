@@ -15,20 +15,22 @@
     </div>
     <div class="businessSection">
       <h2 align="center">B U S I N E S S</h2>
-      <ul>
-        <li>
-          <i class="far fa-building fa-5x"></i>
-          <p>회사소개</p>
-        </li>
-        <li @click="$router.push('/product')">
-          <i class="fas fa-cubes fa-5x"></i>
-          <p>제품안내</p>
-        </li>
-        <li>
-          <i class="fas fa-file-invoice-dollar fa-5x"></i>
-          <p>견적문의</p>
-        </li>
-      </ul>
+      <section class="intro">
+        <div class="company_intro">
+
+        </div>
+        <div class="other_intro">
+          <div class="product_intro">
+
+          </div>
+          <div class="list_intro">
+            <div class="mr_l">
+            </div>
+            <div class="mr_r">
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </template>
@@ -49,8 +51,7 @@ export default class Home extends Vue {
   private options = {
     type: 'loop',
     perPage: 1,
-    height: '37%',
-    width: '93%',
+    height: 530,
     margin: 'auto',
     arrows: false,
     autoplay: true,
@@ -68,50 +69,54 @@ html {
 body {
   margin: 0;
 }
-.mainContainer{
-  background: linear-gradient( to bottom, #0a5d48 50%, rgb(243, 243, 242) 10% );
-}
 .mainContainer img{
   width: 100%;
 }
-.splide{
-  margin: 0 auto;
+.intro{
+  display: flex;
+  justify-content: center;
 }
-.splide__track{
-  border-radius: 15px;
-  border: 5px solid rgb(243, 243, 242);
-  box-shadow: 5px 5px 15px;
+.company_intro{
+  width: 585px;
+  height: 529px;
+  display: inline-block;
+  background: url('~@/assets/images/company_int.jpg');
+  background-size: cover;
+  filter: brightness(0.7);
+  margin-right: 10px;
 }
-.businessSection {
+.other_intro{
+  width: 585px;
+  float: right;
+  margin-left: 10px;
+}
+.product_intro{
   width: 100%;
-  height: 400px;
-  /* background-color: rgb(218, 157, 78); */
-  /* background-image: url("../../assets/images/stone.jpg"); */
+  height: 260px;
+  margin-bottom: 24px;
+  background: url('~@/assets/images/product_int.jpg');
+  background-size: cover;
+  filter: brightness(0.7);
+}
+.list_intro{
+  width: 100%;
+}
+.mr_l{
+  width: 50%;
+  height: 245px;
+  background-color: darksalmon;
+  display: inline-block;
+}
+.mr_r{
+  width: 50%;
+  height: 245px;
+  background-color: rgb(85, 30, 12);
+  display: inline-block;
 }
 .businessSection h2 {
-  margin: 0;
+  margin-bottom: 50px;
   font-size: 1.875rem;
-  padding-top: 70px;
+  padding-top: 50px;
   color: rgb(71, 56, 56);
-}
-.businessSection ul {
-  list-style: none;
-  display: flex;
-  justify-content: space-evenly;
-  width: 80%;
-  margin: 0 auto;
-  height: 290px;
-  align-items: center;
-  padding: 0;
-}
-.businessSection ul li {
-  color: rgb(71, 56, 56);
-}
-.businessSection ul li:hover {
-  color: rgb(151, 35, 35);
-  cursor: pointer;
-}
-.businessSection ul li p {
-  font-weight: bold;
 }
 </style>
