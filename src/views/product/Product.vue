@@ -1,7 +1,6 @@
 <template>
   <div>
-    <div class="product_banner">
-    </div>
+    <div class="product_banner"></div>
     <div class="product_container" v-for="(product, idx) in products" :key="idx">
       <div class="product_img">
         <img :src="require(`@/assets/images/products/${product.img}`)" alt="">
@@ -25,7 +24,3 @@ export default class Product extends Vue {
   ]
 }
 </script>
-
-<style>
-
-</style>
